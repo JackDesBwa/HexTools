@@ -23,3 +23,12 @@ For example,
 produces this kind of output
     0000000: 7C C9 7D 59 F9 AE F4 FB  8C 49 75 7B 69 EE CC F7 
     0000010: D4 DA 32 F3
+
+bin2hex
+-------
+
+Bin2hex performs similar operation than livehex, but the output format
+is different. It prints hexadecimal values separated by spaces without
+any other presentation characters, except that each read batch is
+separated by a new line character. This can be useful in interactive
+programs.
