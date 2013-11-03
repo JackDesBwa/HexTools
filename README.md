@@ -35,3 +35,23 @@ is different. It prints hexadecimal values separated by spaces without
 any other presentation characters, except that each read batch is
 separated by a new line character. This can be useful in interactive
 programs.
+
+hex2bin
+-------
+
+Hex2bin transforms standard input hexadecimal values to binary values.
+The hex values can be formatted in various formats such as AA, aa, 0xAA,
+0Xaa, 0xAa, etc. and must be separated by spaces. A non-hexadecimal
+character stops evaluation of the line.
+
+With the command
+
+    ./hex2bin | ./bin2hex 
+
+and input
+
+    1 23 0x45 0X67 89 ab CD          eF
+
+the output is
+
+     01 23 45 67 89 AB CD EF
