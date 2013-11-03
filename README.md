@@ -8,6 +8,7 @@ There are one-file code without any special library needed. Thus it can
 simply be built with default make rules. For example, to build "livehex"
 just execute "make livehex".
 
+
 livehex
 -------
 
@@ -27,6 +28,7 @@ produces this kind of output
     0000000: 7C C9 7D 59 F9 AE F4 FB  8C 49 75 7B 69 EE CC F7 
     0000010: D4 DA 32 F3
 
+
 bin2hex
 -------
 
@@ -35,6 +37,15 @@ is different. It prints hexadecimal values separated by spaces without
 any other presentation characters, except that each read batch is
 separated by a new line character. This can be useful in interactive
 programs.
+
+With the command
+
+    echo -ne "\x1\x23\x45\x67\x89\xab\xcd\xef" | ./bin2hex
+
+output is
+
+     01 23 45 67 89 AB CD EF
+
 
 hex2bin
 -------
@@ -46,12 +57,9 @@ character stops evaluation of the line.
 
 With the command
 
-    ./hex2bin | ./bin2hex 
+    echo "1 23 0x45 0X67 89 ab CD          eF" | ./hex2bin | od -t x1
 
-and input
+output is
 
-    1 23 0x45 0X67 89 ab CD          eF
-
-the output is
-
-     01 23 45 67 89 AB CD EF
+    0000000 01 23 45 67 89 ab cd ef
+    0000010
