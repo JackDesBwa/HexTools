@@ -5,7 +5,7 @@ Build
 -----
 
 There are one-file code without any special library needed. Thus it can
-simply be build with default make rules. For example, to build "livehex"
+simply be built with default make rules. For example, to build "livehex"
 just execute "make livehex".
 
 livehex
@@ -19,8 +19,11 @@ This allows to analyse a stream which has low throughput without having
 to wait for a complete 16 bytes emission.
 
 For example, 
+
     dd if=/dev/urandom of=/dev/stdout count=20 bs=1 2>/dev/null | ./livehex
+
 produces this kind of output
+
     0000000: 7C C9 7D 59 F9 AE F4 FB  8C 49 75 7B 69 EE CC F7 
     0000010: D4 DA 32 F3
 
