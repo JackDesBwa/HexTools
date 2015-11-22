@@ -1,0 +1,7 @@
+# Ignore generated binaries
+bin2hex
+hex2bin
+livehex
+schex
+# Ignore hidden files
+.*
