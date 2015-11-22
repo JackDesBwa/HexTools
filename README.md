@@ -63,3 +63,16 @@ output is
 
     0000000 01 23 45 67 89 ab cd ef
     0000010
+
+
+schex
+-----
+
+Schex is a utility specially designed to be used with socat. It is like
+a bin2hex from fd 3 to stderr and a hex2bin from stdin to stdout.
+
+For example, the following command opens a tcp server on port 1234 with
+socat. Incoming binary data are translated to hexadecimal and typing
+hexadecial send answer back translated into binary.
+
+    socat tcp-listen:1234,reuseaddr exec:./schex,fdin=3
